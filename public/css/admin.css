@@ -1,0 +1,160 @@
+/* =============================================
+   AirArabian — Admin Panel Stylesheet
+   ============================================= */
+
+/* ---- LAYOUT ---- */
+.admin-body { background:#060f1e; font-family:'Inter',sans-serif; color:#fff; overflow-x:hidden; }
+.admin-wrapper { display:flex; min-height:100vh; }
+
+/* ---- SIDEBAR ---- */
+.admin-sidebar { width:260px; background:#0a1628; border-right:1px solid rgba(201,168,76,0.12); display:flex; flex-direction:column; position:fixed; top:0; left:0; height:100vh; z-index:100; transition:transform .3s; overflow-y:auto; }
+.sidebar-header { padding:20px; border-bottom:1px solid rgba(201,168,76,0.12); display:flex; align-items:center; justify-content:space-between; }
+.sidebar-brand { font-size:1.3rem; font-weight:800; color:#fff; text-decoration:none; }
+.sidebar-user { display:flex; align-items:center; gap:12px; padding:16px 20px; border-bottom:1px solid rgba(255,255,255,0.06); margin-bottom:8px; }
+.user-avatar { width:40px; height:40px; background:linear-gradient(135deg,#c9a84c,#a07830); border-radius:10px; display:flex; align-items:center; justify-content:center; color:#0a1628; font-size:1rem; flex-shrink:0; }
+.vendor-avatar { background:linear-gradient(135deg,#1a6b4a,#0f4a33); color:#2dd4bf; }
+.user-name { font-size:.875rem; font-weight:600; color:#fff; }
+.user-role { font-size:.7rem; color:#8899bb; }
+.sidebar-nav { padding:0 12px; flex:1; }
+.nav-section-title { font-size:.65rem; font-weight:700; text-transform:uppercase; letter-spacing:.1em; color:#8899bb; padding:8px 8px 4px; margin-top:4px; }
+.sidebar-link { display:flex; align-items:center; gap:12px; padding:10px 12px; border-radius:10px; color:#8899bb; text-decoration:none; font-size:.875rem; font-weight:500; transition:all .2s; cursor:pointer; border:none; background:transparent; width:100%; margin-bottom:2px; }
+.sidebar-link i { width:18px; text-align:center; font-size:.95rem; }
+.sidebar-link:hover { background:rgba(201,168,76,0.08); color:#fff; }
+.sidebar-link.active { background:linear-gradient(135deg,rgba(201,168,76,0.2),rgba(201,168,76,0.05)); color:#c9a84c; border:1px solid rgba(201,168,76,0.2); }
+.sidebar-link .badge { font-size:.65rem; padding:2px 7px; }
+
+/* ---- TOPBAR ---- */
+.admin-main { margin-left:260px; flex:1; display:flex; flex-direction:column; min-height:100vh; }
+.admin-topbar { background:#0a1628; border-bottom:1px solid rgba(201,168,76,0.12); padding:0 24px; height:64px; display:flex; align-items:center; gap:16px; position:sticky; top:0; z-index:50; }
+.topbar-title { font-size:1rem; font-weight:600; color:#fff; }
+.sidebar-toggle-btn { background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); color:#8899bb; width:36px; height:36px; border-radius:8px; display:none; align-items:center; justify-content:center; cursor:pointer; font-size:.95rem; }
+.admin-content { padding:28px; flex:1; }
+
+/* ---- STAT CARDS ---- */
+.stat-card { background:#0f2040; border:1px solid rgba(255,255,255,0.06); border-radius:14px; padding:24px; display:flex; flex-direction:column; gap:8px; position:relative; overflow:hidden; transition:all .3s; }
+.stat-card:hover { transform:translateY(-3px); border-color:rgba(201,168,76,0.25); }
+.stat-card::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; }
+.stat-card-blue::before { background:linear-gradient(90deg,#3b82f6,#1d4ed8); }
+.stat-card-gold::before { background:linear-gradient(90deg,#c9a84c,#a07830); }
+.stat-card-green::before { background:linear-gradient(90deg,#10b981,#059669); }
+.stat-card-purple::before { background:linear-gradient(90deg,#8b5cf6,#6d28d9); }
+.stat-card-icon { width:48px; height:48px; border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:1.2rem; position:absolute; top:20px; right:20px; }
+.stat-card-blue .stat-card-icon { background:rgba(59,130,246,0.15); color:#3b82f6; }
+.stat-card-gold .stat-card-icon { background:rgba(201,168,76,0.15); color:#c9a84c; }
+.stat-card-green .stat-card-icon { background:rgba(16,185,129,0.15); color:#10b981; }
+.stat-card-purple .stat-card-icon { background:rgba(139,92,246,0.15); color:#8b5cf6; }
+.stat-card-number { font-size:1.8rem; font-weight:800; line-height:1; }
+.stat-card-label { font-size:.8rem; color:#8899bb; font-weight:500; }
+.stat-card-sub { font-size:.75rem; margin-top:4px; }
+
+/* ---- MINI STAT CARD ---- */
+.mini-stat-card { background:#0f2040; border:1px solid rgba(255,255,255,0.06); border-radius:10px; padding:10px 16px; font-size:.875rem; color:#8899bb; display:inline-flex; align-items:center; }
+
+/* ---- TABLE CARD ---- */
+.admin-table-card { background:#0f2040; border:1px solid rgba(255,255,255,0.06); border-radius:14px; overflow:hidden; }
+.admin-table-header { display:flex; justify-content:space-between; align-items:center; padding:16px 20px; border-bottom:1px solid rgba(255,255,255,0.06); }
+.btn-view-all { font-size:.75rem; color:#c9a84c; text-decoration:none; font-weight:600; padding:4px 12px; border:1px solid rgba(201,168,76,0.3); border-radius:6px; transition:all .2s; }
+.btn-view-all:hover { background:rgba(201,168,76,0.1); color:#c9a84c; }
+.admin-table { margin:0; }
+.admin-table thead th { background:#0a1628; color:#8899bb; font-size:.75rem; font-weight:600; text-transform:uppercase; letter-spacing:.05em; padding:10px 16px; border-bottom:1px solid rgba(255,255,255,0.06); border-top:none; white-space:nowrap; }
+.admin-table tbody td { padding:12px 16px; border-bottom:1px solid rgba(255,255,255,0.04); font-size:.875rem; vertical-align:middle; color:#cdd5e0; }
+.admin-table tbody tr:hover td { background:rgba(255,255,255,0.02); }
+.admin-table tbody tr:last-child td { border-bottom:none; }
+
+/* ---- PENDING ITEMS ---- */
+.pending-item { display:flex; align-items:center; gap:12px; padding:12px 20px; border-bottom:1px solid rgba(255,255,255,0.04); transition:background .2s; }
+.pending-item:hover { background:rgba(255,255,255,0.02); }
+.pending-item:last-child { border-bottom:none; }
+.pending-avatar { width:36px; height:36px; background:rgba(201,168,76,0.12); border-radius:10px; display:flex; align-items:center; justify-content:center; color:#c9a84c; font-size:.85rem; flex-shrink:0; }
+.payment-avatar { background:rgba(139,92,246,0.12); color:#8b5cf6; }
+.btn-mini-action { font-size:.75rem; padding:4px 12px; border-radius:6px; background:rgba(201,168,76,0.12); color:#c9a84c; border:1px solid rgba(201,168,76,0.2); text-decoration:none; white-space:nowrap; transition:all .2s; }
+.btn-mini-action:hover { background:rgba(201,168,76,0.2); color:#c9a84c; }
+
+/* ---- FORM CARDS ---- */
+.admin-form-card { background:#0f2040; border:1px solid rgba(255,255,255,0.06); border-radius:14px; padding:28px; }
+.form-section-title { font-size:.7rem; font-weight:700; text-transform:uppercase; letter-spacing:.1em; color:#c9a84c; border-bottom:1px solid rgba(201,168,76,0.15); padding-bottom:8px; margin-bottom:4px; }
+
+/* ---- BUTTONS ---- */
+.btn-admin-primary { background:linear-gradient(135deg,#c9a84c,#a07830); color:#0a1628; border:none; padding:10px 20px; border-radius:10px; font-weight:700; font-size:.875rem; cursor:pointer; text-decoration:none; display:inline-flex; align-items:center; transition:all .2s; }
+.btn-admin-primary:hover { transform:translateY(-1px); box-shadow:0 4px 16px rgba(201,168,76,0.35); color:#0a1628; }
+.btn-admin-secondary { background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); color:#8899bb; padding:9px 18px; border-radius:10px; font-weight:600; font-size:.875rem; cursor:pointer; text-decoration:none; display:inline-flex; align-items:center; transition:all .2s; }
+.btn-admin-secondary:hover { background:rgba(255,255,255,0.1); color:#fff; }
+.btn-admin-danger { background:rgba(239,68,68,0.15); border:1px solid rgba(239,68,68,0.3); color:#ef4444; padding:10px 20px; border-radius:10px; font-weight:700; font-size:.875rem; cursor:pointer; text-decoration:none; display:inline-flex; align-items:center; transition:all .2s; }
+.btn-admin-danger:hover { background:rgba(239,68,68,0.25); }
+
+/* ---- ACTION BUTTONS ---- */
+.action-btns { display:flex; gap:6px; }
+.action-btn { width:32px; height:32px; border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:.8rem; border:1px solid; cursor:pointer; text-decoration:none; transition:all .2s; }
+.action-view { background:rgba(59,130,246,0.1); border-color:rgba(59,130,246,0.3); color:#3b82f6; }
+.action-view:hover { background:rgba(59,130,246,0.2); color:#3b82f6; }
+.action-edit { background:rgba(201,168,76,0.1); border-color:rgba(201,168,76,0.3); color:#c9a84c; }
+.action-edit:hover { background:rgba(201,168,76,0.2); color:#c9a84c; }
+.action-delete { background:rgba(239,68,68,0.1); border-color:rgba(239,68,68,0.3); color:#ef4444; background-color:rgba(239,68,68,0.1); }
+.action-delete:hover { background:rgba(239,68,68,0.2); color:#ef4444; }
+.action-approve { background:rgba(16,185,129,0.1); border-color:rgba(16,185,129,0.3); color:#10b981; }
+.action-approve:hover { background:rgba(16,185,129,0.2); color:#10b981; }
+.action-toggle { background:rgba(245,158,11,0.1); border-color:rgba(245,158,11,0.3); color:#f59e0b; }
+
+/* ---- STATUS BADGES ---- */
+.status-badge { display:inline-flex; align-items:center; padding:3px 10px; border-radius:20px; font-size:.7rem; font-weight:700; text-transform:uppercase; letter-spacing:.03em; }
+.status-available, .status-approved, .status-confirmed { background:rgba(16,185,129,0.12); color:#10b981; }
+.status-pending { background:rgba(245,158,11,0.12); color:#f59e0b; }
+.status-hold { background:rgba(251,191,36,0.12); color:#fbbf24; }
+.status-booked,.status-rejected,.status-cancelled { background:rgba(239,68,68,0.12); color:#ef4444; }
+
+/* ---- CATEGORY PILLS ---- */
+.category-pill { display:inline-flex; align-items:center; padding:3px 10px; border-radius:20px; font-size:.7rem; font-weight:700; }
+.category-uae { background:rgba(59,130,246,0.12); color:#3b82f6; }
+.category-ksa { background:rgba(16,185,129,0.12); color:#10b981; }
+.category-umrah { background:rgba(139,92,246,0.12); color:#8b5cf6; }
+.category-tour { background:rgba(245,158,11,0.12); color:#f59e0b; }
+
+/* ---- FILTER BAR ---- */
+.filter-bar { background:#0f2040; border:1px solid rgba(255,255,255,0.06); border-radius:12px; padding:16px 20px; }
+
+/* ---- INFO TABLE ---- */
+.info-table { margin:0; }
+.info-table td { padding:8px 0; border:none; border-bottom:1px solid rgba(255,255,255,0.04); font-size:.875rem; vertical-align:top; }
+.info-table td:first-child { width:40%; font-size:.8rem; color:#8899bb; }
+.info-table tbody tr:last-child td { border-bottom:none; }
+
+/* ---- TABLE AVATAR ---- */
+.table-avatar { width:32px; height:32px; background:rgba(201,168,76,0.12); border-radius:8px; display:flex; align-items:center; justify-content:center; color:#c9a84c; font-size:.8rem; flex-shrink:0; }
+
+/* ---- PAYMENT ---- */
+.method-badge { display:inline-flex; align-items:center; padding:3px 10px; border-radius:20px; font-size:.7rem; font-weight:700; }
+.method-jazzcash { background:rgba(239,68,68,0.12); color:#ef4444; }
+.method-easypaisa { background:rgba(16,185,129,0.12); color:#10b981; }
+.proof-thumb { display:inline-flex; align-items:center; gap:6px; font-size:.75rem; color:#c9a84c; }
+.proof-thumb img { height:32px; width:32px; object-fit:cover; border-radius:4px; }
+.proof-image-container img { max-width:100%; border-radius:12px; }
+.proof-full-image { max-width:100%; border-radius:12px; border:1px solid rgba(255,255,255,0.1); }
+
+/* ---- VENDOR DETAIL ---- */
+.vendor-detail-avatar { width:56px; height:56px; background:linear-gradient(135deg,rgba(201,168,76,0.2),rgba(201,168,76,0.05)); border:1px solid rgba(201,168,76,0.3); border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:1.4rem; color:#c9a84c; flex-shrink:0; }
+
+/* ---- VENDOR BOOKING FORM ---- */
+.ticket-summary-card { background:#0f2040; border:1px solid rgba(201,168,76,0.3); border-radius:14px; padding:24px; }
+.ticket-summary-icon { width:56px; height:56px; background:linear-gradient(135deg,#c9a84c,#a07830); border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:1.4rem; color:#0a1628; flex-shrink:0; }
+.ticket-route-summary { font-size:1.1rem; font-weight:700; color:#fff; }
+.ticket-price-display { font-size:1.4rem; font-weight:800; color:#c9a84c; }
+.price-amount-lg { font-size:2rem; }
+.hold-timer-badge { display:inline-flex; align-items:center; background:rgba(245,158,11,0.12); border:1px solid rgba(245,158,11,0.3); color:#f59e0b; padding:4px 12px; border-radius:8px; font-size:.8rem; font-weight:600; }
+.payment-method-select { display:flex; gap:12px; }
+.payment-method-option { flex:1; cursor:pointer; }
+.payment-method-option input[type=radio] { display:none; }
+.payment-method-card { background:rgba(255,255,255,0.04); border:2px solid rgba(255,255,255,0.1); border-radius:12px; padding:16px; text-align:center; transition:all .2s; color:#8899bb; }
+.payment-method-card i { display:block; font-size:1.5rem; margin-bottom:8px; }
+.payment-method-option input:checked + .payment-method-card { border-color:#c9a84c; background:rgba(201,168,76,0.1); color:#c9a84c; }
+.proof-upload-area { background:rgba(255,255,255,0.03); border:2px dashed rgba(255,255,255,0.1); border-radius:12px; padding:32px; text-align:center; cursor:pointer; transition:all .2s; color:#8899bb; }
+.proof-upload-area:hover { border-color:#c9a84c; background:rgba(201,168,76,0.05); }
+
+/* ---- MOBILE ---- */
+.sidebar-overlay { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.6); z-index:99; }
+@media (max-width: 992px) {
+  .admin-sidebar { transform:translateX(-100%); }
+  .admin-sidebar.open { transform:translateX(0); }
+  .admin-main { margin-left:0; }
+  .sidebar-toggle-btn { display:flex; }
+  .sidebar-overlay.open { display:block; }
+}
